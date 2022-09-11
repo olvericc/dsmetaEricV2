@@ -1,9 +1,9 @@
+import axios from 'axios'
+import { useEffect, useState } from 'react'
 import NotificationButton from '../NotificationButton'
 import './styles.css'
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css"
-import { useEffect, useState } from 'react'
-import axios from 'axios'
 
 function SalesCard() {
 
@@ -17,7 +17,7 @@ function SalesCard() {
     useEffect(() => {
         axios.get("http://localhost:8080/sales")
             .then(response =>{
-                console.log(response.data);
+                console.log(response.data)
             })
     }, []);
 
