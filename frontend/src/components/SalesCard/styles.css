@@ -1,11 +1,11 @@
 .dsmeta-card {
-    background-color: #283142;
+    background-color: rgb(38, 38, 38);
     border-radius: 10px;
     padding: 30px 10px;
 }
 
 .dsmeta-sales-title {
-    color: #676fff;
+    color: #ffffff;
     font-size: 24px;
     margin-bottom: 20px;
 }
