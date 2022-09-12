@@ -23,7 +23,7 @@ function SalesCard() {
         const dmin = minDate.toISOString().slice(0, 10);
         const dmax = maxDate.toISOString().slice(0, 10);
 
-        console.log(dmin);
+        //console.log(dmin);
 
         //max date and min date
         axios.get(`${BASE_URL}/sales?minDate=${dmin}&maxDate=${dmax}`)
@@ -34,7 +34,7 @@ function SalesCard() {
 
     return (
         <div className="dsmeta-card">
-            <h2 className="dsmeta-sales-title">Vendas</h2>
+            <h2 className="dsmeta-sales-title">Sales</h2>
             <div>
                 <div className="dsmeta-form-control-container">
                     <DatePicker
@@ -60,11 +60,11 @@ function SalesCard() {
                         <tr>
                             <th className="show992">ID</th>
                             <th className="show576">Data</th>
-                            <th>Vendedor</th>
-                            <th className="show992">Visitas</th>
-                            <th className="show992">Vendas</th>
+                            <th>Seller</th>
+                            <th className="show992">Visits</th>
+                            <th className="show992">Sales</th>
                             <th>Total</th>
-                            <th>Notificar</th>
+                            <th>Notification</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -79,7 +79,7 @@ function SalesCard() {
                                     <td>R$ {sale.amount.toFixed(2)}</td>
                                     <td>
                                         <div className="dsmeta-red-btn-container">
-                                            <NotificationButton />
+                                            <NotificationButton saleId={sale.id} />
                                         </div>
                                     </td>
                                 </tr>
